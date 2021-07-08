@@ -3,6 +3,8 @@ import '@nomiclabs/hardhat-waffle';
 import * as fs from 'fs';
 import * as dotenv from 'dotenv'
 
+import './tasks/createOToken'
+
 dotenv.config()
 
 const mnemonic = fs.existsSync('.secret')
@@ -13,7 +15,6 @@ const mnemonic = fs.existsSync('.secret')
   : "test test test test test test test test test test test junk"
 
 const infuraKey = process.env.INFURA_KEY
-const etherscanKey = process.env.ETHERSCAN_KEY
 
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more

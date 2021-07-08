@@ -7,7 +7,7 @@
 pragma solidity ^0.7.0;
 
 
-interface OptionsFactory {
+interface IOptionFactory {
     /**
      * @notice creates a new Option Contract
      * @param _collateralType The collateral asset. Eg. "ETH"
