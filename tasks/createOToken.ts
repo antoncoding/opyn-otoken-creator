@@ -35,7 +35,7 @@ task("createCall", "Create an call option")
 
   console.log(`Creating new ${asset} $${strikePriceHumanReadable} call option on ${network} network... 🧁`)
   
-  await factory.createOptionContract(
+  const tx = await factory.createOptionContract(
     asset, // collateral
     collateralExp,
     underlying,
@@ -47,4 +47,6 @@ task("createCall", "Create an call option")
     expiry,
     expiry
   )
+
+  console.log(`New otoken created! Tx: ${tx.hash} 🍜`)
 });
