@@ -7,7 +7,7 @@ import { networkToFactory } from './config'
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
 task("createCall", "Create an call option")
-  .addParam('asset', 'Asset you wanna create call option for, will also be the collateral asset.', 'WETH')
+  .addParam('asset', 'Asset you wanna create call option for, will also be the collateral asset.', 'UNI')
   .addParam('strikePrice', 'Human readable strike price in USD')
   .addParam('expiry', 'expiry timestamp')
   
@@ -48,5 +48,6 @@ task("createCall", "Create an call option")
     expiry
   )
 
-  console.log(`New otoken created! Tx: ${tx.hash} 🍜`)
+  console.log(`New otoken created! Tx: ${tx.hash} 🍜.`)
+  console.log(`Please contact Opyn team to setup the token symbol & name to start using the new contract 🍨 `)
 });
