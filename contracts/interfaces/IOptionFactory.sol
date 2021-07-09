@@ -8,6 +8,9 @@ pragma solidity ^0.7.0;
 
 
 interface IOptionFactory {
+
+    function tokens(string memory symbol) external view returns (address);
+
     /**
      * @notice creates a new Option Contract
      * @param _collateralType The collateral asset. Eg. "ETH"

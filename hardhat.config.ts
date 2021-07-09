@@ -22,8 +22,8 @@ const infuraKey = process.env.INFURA_KEY
 export default {
   networks: {
     hardhat: {},
-    ropsten: {
-      url: `https://ropsten.infura.io/v3/${infuraKey}`,
+    mainnet: {
+      url: `https://mainnet.infura.io/v3/${infuraKey}`,
       accounts: {
         mnemonic: mnemonic,
       },
