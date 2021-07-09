@@ -1,4 +1,4 @@
-import { task, } from "hardhat/config";
+import { task, types } from "hardhat/config";
 import BigNumber from 'bignumber.js'
 import "@nomiclabs/hardhat-waffle";
 
@@ -7,9 +7,9 @@ import { networkToFactory } from './config'
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
 task("createCall", "Create an call option")
-  .addParam('asset', 'Asset you wanna create call option for, will also be the collateral asset.', 'UNI')
-  .addParam('strikePrice', 'Human readable strike price in USD')
-  .addParam('expiry', 'expiry timestamp')
+  .addParam('asset', 'Asset you wanna create call option for, will also be the collateral asset.', 'UNI', types.string)
+  .addParam('strikePrice', 'Human readable strike price in USD', undefined, types.int)
+  .addParam('expiry', 'expiry timestamp', undefined, types.int)
   
   .setAction(async ({asset, strikePrice: strikePriceHumanReadable, expiry}, hre) => {
 
